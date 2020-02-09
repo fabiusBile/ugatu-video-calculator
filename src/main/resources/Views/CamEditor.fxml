@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="274.0" prefWidth="405.0" xmlns="http://javafx.com/javafx/10.0.2-internal"
+            fx:controller="Presentation.Controllers.CamEditorController">
+    <children>
+        <VBox layoutX="10.0" layoutY="10.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+              AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label text="Название камеры"/>
+                <TextField fx:id="camName"/>
+                <Label text="Разрешение">
+                    <font>
+                        <Font name="System Bold" size="13.0"/>
+                    </font>
+                </Label>
+                <HBox alignment="CENTER">
+                    <children>
+                        <TextField fx:id="resolutionW" promptText="Ширина" HBox.hgrow="ALWAYS"/>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefWidth="15.0" text="x"
+                               textAlignment="CENTER"/>
+                        <TextField fx:id="resolutionH" promptText="Высота" HBox.hgrow="ALWAYS"/>
+                    </children>
+                    <opaqueInsets>
+                        <Insets/>
+                    </opaqueInsets>
+                </HBox>
+                <HBox spacing="15.0">
+                    <children>
+                        <VBox spacing="10.0">
+                            <children>
+                                <Label text="Частота кадров">
+                                    <font>
+                                        <Font name="System Bold" size="13.0"/>
+                                    </font>
+                                </Label>
+                                <ChoiceBox fx:id="frameRate" prefWidth="185.0"/>
+                            </children>
+                        </VBox>
+                        <VBox spacing="10.0">
+                            <children>
+                                <Label text="Кодек">
+                                    <font>
+                                        <Font name="System Bold" size="13.0"/>
+                                    </font>
+                                </Label>
+                                <ChoiceBox fx:id="codec" prefWidth="185.0"/>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+                <CheckBox fx:id="isColor" mnemonicParsing="false" text="Цветная"/>
+                <HBox spacing="15.0">
+                    <children>
+                        <Button defaultButton="true" mnemonicParsing="false" onAction="#save" text="Сохранить"/>
+                        <Button cancelButton="true" mnemonicParsing="false" onAction="#cancel" text="Отмена"/>
+                    </children>
+                    <VBox.margin>
+                        <Insets top="5.0"/>
+                    </VBox.margin>
+                </HBox>
+            </children>
+        </VBox>
+
+    </children>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+    </padding>
+</AnchorPane>
