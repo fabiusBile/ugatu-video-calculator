@@ -8,6 +8,14 @@ public class Resolution {
     int Width;
     int Height;
 
+    public Resolution(int width, int height) {
+        Width = width;
+        Height = height;
+    }
+
+    public Resolution() {
+    }
+
     public int getWidth() {
         return Width;
     }

@@ -22,6 +22,19 @@ public class Cam {
         this.isColor = true;
     }
 
+    public Cam(String name,
+               Integer resolutionW,
+               Integer resolutionH,
+               Integer frameRate,
+               CodecType codecType,
+               boolean isColor) {
+        this.name = name;
+        this.resolution = new Resolution(resolutionW,resolutionH);
+        this.frameRate = frameRate;
+        this.codecType = codecType;
+        this.isColor = isColor;
+    }
+
     public Resolution getResolution() {
         return resolution;
     }

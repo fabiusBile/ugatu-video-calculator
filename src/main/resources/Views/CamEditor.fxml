@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
 <AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="274.0" prefWidth="405.0" xmlns="http://javafx.com/javafx/10.0.2-internal"
+            prefHeight="274.0" prefWidth="405.0" xmlns="http://javafx.com/javafx/10.0.2-internal" fx:id="camEditor"
             fx:controller="Presentation.Controllers.CamEditorController">
     <children>
         <VBox layoutX="10.0" layoutY="10.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
@@ -56,7 +56,7 @@
                 <CheckBox fx:id="isColor" mnemonicParsing="false" text="Цветная"/>
                 <HBox spacing="15.0">
                     <children>
-                        <Button defaultButton="true" mnemonicParsing="false" onAction="#save" text="Сохранить"/>
+                        <Button defaultButton="true" fx:id="save" mnemonicParsing="false" onAction="#save" text="Сохранить"/>
                         <Button cancelButton="true" mnemonicParsing="false" onAction="#cancel" text="Отмена"/>
                     </children>
                     <VBox.margin>

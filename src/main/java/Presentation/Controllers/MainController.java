@@ -11,10 +11,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
-import javafx.scene.control.Spinner;
-import javafx.scene.control.SpinnerValueFactory;
+import javafx.scene.control.*;
 
 import java.net.URL;
 import java.time.Duration;
@@ -23,31 +20,33 @@ import java.util.ResourceBundle;
 public class MainController implements Initializable {
 
     @FXML
-    public Spinner<Integer> minutesSelector;
+    public Spinner<Integer> monthsSelector;
     @FXML
-    public Spinner<Integer> hoursSelector;
+    public Spinner<Integer> weeksSelector;
     @FXML
     public Spinner<Integer> daysSelector;
     @FXML
     public Label storageSizeField;
+    @FXML
+    public Button addCamBtn;
     @FXML
     private ListView<Cam> camsListView;
 
     private ObservableList<Cam> camsList = FXCollections.observableArrayList();
 
     @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        minutesSelector.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 60));
-        hoursSelector.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 24));
+        monthsSelector.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 60));
+        weeksSelector.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 24));
         daysSelector.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 365));
 
-        for (var selector : new Spinner[]{minutesSelector, hoursSelector, daysSelector}) {
+        for (var selector : new Spinner[]{monthsSelector, weeksSelector, daysSelector}) {
             selector.getEditor().setTextFormatter(new IntegerFormatter());
         }
 
         camsListView.setItems(camsList);
-        camsListView.setCellFactory(s -> new CamCellVM());
+        camsListView.setCellFactory(listView -> new CamCellVM());
     }
 
     public void addCam(ActionEvent actionEvent) {
@@ -61,11 +60,10 @@ public class MainController implements Initializable {
     }
 
     private Duration calculateStorageTime() {
-        var duration = Duration.ofDays(daysSelector.getValue())
-                .plusHours(hoursSelector.getValue())
-                .plusMinutes(minutesSelector.getValue());
 
-        return duration;
+        return Duration.ofDays(daysSelector.getValue())
+                .plusDays(weeksSelector.getValue()*7)
+                .plusDays(monthsSelector.getValue()*30);
     }
 
     private void openCamEditor() {
