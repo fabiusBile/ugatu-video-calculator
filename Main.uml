@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>Main</OriginalElement>
+  <nodes>
+    <node x="641.0" y="712.0">Presentation.Factories.CamEditorFactory</node>
+    <node x="826.5" y="89.0">Domain.Models.Resolution</node>
+    <node x="928.4404761904761" y="1004.0">Presentation.Controllers.MainController</node>
+    <node x="1062.5" y="0.0">Domain.Models.CodecType</node>
+    <node x="0.0" y="848.0">Presentation.Utils.StorageSizePresenter</node>
+    <node x="982.25" y="544.0">Domain.Services.VideoSizeCalculator</node>
+    <node x="964.5" y="100.0">Domain.Services.CodecCompressRatio</node>
+    <node x="568.25" y="815.0">Presentation.ViewModels.CamCellVM</node>
+    <node x="984.25" y="224.0">Domain.Models.Cam</node>
+    <node x="242.0" y="290.0">Presentation.Formatters.IntegerFormatter</node>
+    <node x="340.0" y="479.0">Presentation.Controllers.CamEditorController</node>
+    <node x="0.0" y="1190.0">Main</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Presentation.ViewModels.CamCellVM" target="Domain.Models.Cam">
+      <point x="-62.25" y="-59.5" />
+      <point x="630.5" y="449.0" />
+      <point x="1040.5" y="449.0" />
+      <point x="-33.75" y="92.5" />
+    </edge>
+    <edge source="Presentation.Controllers.MainController" target="Presentation.Factories.CamEditorFactory">
+      <point x="-17.5" y="-70.5" />
+      <point x="1050.9404761904761" y="954.0" />
+      <point x="971.75" y="954.0" />
+      <point x="110.25" y="26.5" />
+    </edge>
+    <edge source="Domain.Models.Cam" target="Domain.Models.CodecType">
+      <point x="75.0" y="-92.5" />
+      <point x="1149.25" y="204.0" />
+      <point x="1293.0" y="204.0" />
+      <point x="1293.0" y="49.0" />
+      <point x="1164.25" y="49.0" />
+      <point x="46.25" y="14.5" />
+    </edge>
+    <edge source="Domain.Models.Cam" target="Domain.Models.Resolution">
+      <point x="-75.0" y="-92.5" />
+      <point x="999.25" y="204.0" />
+      <point x="846.1666666666666" y="204.0" />
+      <point x="-39.33333333333337" y="37.5" />
+    </edge>
+    <edge source="Presentation.Controllers.MainController" target="Presentation.Utils.StorageSizePresenter">
+      <point x="-122.5" y="-70.5" />
+      <point x="945.9404761904761" y="984.0" />
+      <point x="140.0" y="984.0" />
+      <point x="0.0" y="26.5" />
+    </edge>
+    <edge source="Domain.Services.CodecCompressRatio" target="Domain.Models.CodecType">
+      <point x="76.75" y="-26.5" />
+      <point x="1194.75" y="69.0" />
+      <point x="1127.25" y="69.0" />
+      <point x="9.25" y="14.5" />
+    </edge>
+    <edge source="Presentation.Factories.CamEditorFactory" target="Domain.Models.Cam">
+      <point x="110.25" y="-26.5" />
+      <point x="971.75" y="459.0" />
+      <point x="1063.0" y="459.0" />
+      <point x="-11.25" y="92.5" />
+    </edge>
+    <edge source="Presentation.Controllers.CamEditorController" target="Domain.Models.Cam">
+      <point x="112.0" y="-91.5" />
+      <point x="592.0" y="439.0" />
+      <point x="1018.0" y="439.0" />
+      <point x="-56.25" y="92.5" />
+    </edge>
+    <edge source="Presentation.Controllers.MainController" target="Presentation.ViewModels.CamCellVM">
+      <point x="-52.5" y="-70.5" />
+      <point x="1015.9404761904761" y="964.0" />
+      <point x="692.75" y="964.0" />
+      <point x="0.0" y="59.5" />
+    </edge>
+    <edge source="Presentation.Controllers.MainController" target="Domain.Models.Cam">
+      <point x="122.5" y="-70.5" />
+      <point x="1190.9404761904761" y="984.0" />
+      <point x="1403.75" y="984.0" />
+      <point x="1403.75" y="429.0" />
+      <point x="1153.0" y="429.0" />
+      <point x="78.75" y="92.5" />
+    </edge>
+    <edge source="Presentation.Factories.CamEditorFactory" target="Presentation.Controllers.CamEditorController">
+      <point x="-110.25" y="-26.5" />
+      <point x="751.25" y="687.0" />
+      <point x="480.0" y="687.0" />
+      <point x="0.0" y="91.5" />
+    </edge>
+    <edge source="Domain.Services.VideoSizeCalculator" target="Domain.Models.Cam">
+      <point x="0.0" y="-26.5" />
+      <point x="1176.75" y="459.0" />
+      <point x="1085.5" y="459.0" />
+      <point x="11.25" y="92.5" />
+    </edge>
+    <edge source="Presentation.Controllers.MainController" target="Domain.Services.VideoSizeCalculator">
+      <point x="17.5" y="-70.5" />
+      <point x="1085.9404761904761" y="954.0" />
+      <point x="1176.75" y="954.0" />
+      <point x="0.0" y="26.5" />
+    </edge>
+    <edge source="Presentation.Controllers.MainController" target="Presentation.Formatters.IntegerFormatter">
+      <point x="-87.5" y="-70.5" />
+      <point x="980.9404761904761" y="974.0" />
+      <point x="290.5" y="974.0" />
+      <point x="-48.5" y="26.5" />
+    </edge>
+    <edge source="Presentation.ViewModels.CamCellVM" target="Presentation.Factories.CamEditorFactory">
+      <point x="62.25" y="-59.5" />
+      <point x="755.0" y="790.0" />
+      <point x="751.25" y="790.0" />
+      <point x="-110.25" y="26.5" />
+    </edge>
+    <edge source="Presentation.Controllers.CamEditorController" target="Domain.Models.CodecType">
+      <point x="0.0" y="-91.5" />
+      <point x="480.0" y="459.0" />
+      <point x="457.5" y="459.0" />
+      <point x="457.5" y="59.0" />
+      <point x="1090.25" y="59.0" />
+      <point x="-27.75" y="14.5" />
+    </edge>
+    <edge source="Domain.Models.Cam" target="Domain.Services.CodecCompressRatio">
+      <point x="15.0" y="-92.5" />
+      <point x="1089.25" y="184.0" />
+      <point x="1118.0" y="184.0" />
+      <point x="0.0" y="26.5" />
+    </edge>
+    <edge source="Presentation.Controllers.CamEditorController" target="Presentation.Formatters.IntegerFormatter">
+      <point x="-112.0" y="-91.5" />
+      <point x="368.0" y="459.0" />
+      <point x="387.5" y="459.0" />
+      <point x="48.5" y="26.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.46991724663978024" x="853.1582515737728" y="620.5383121227184" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
