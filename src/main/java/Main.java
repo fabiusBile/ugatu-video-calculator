@@ -18,7 +18,7 @@ public class Main extends Application {
 
         Scene scene = new Scene(root, 300, 275);
 
-        stage.setTitle("FXML Welcome");
+        stage.setTitle("Калькулятор видеонаблюдения");
         stage.setScene(scene);
         stage.show();
     }
