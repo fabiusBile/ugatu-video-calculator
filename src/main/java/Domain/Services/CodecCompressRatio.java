@@ -15,7 +15,7 @@ public class CodecCompressRatio {
         }
     };
 
-    public static double GetCompressRation(CodecType codecType) {
+    public static double getCompressRation(CodecType codecType) {
         return compressionRates.get(codecType);
     }
 }

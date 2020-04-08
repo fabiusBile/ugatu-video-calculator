@@ -67,7 +67,7 @@ public class Cam {
         return Math.round(resolution.getWidth() *
                 resolution.getHeight() *
                 frameRate *
-                CodecCompressRatio.GetCompressRation(codecType) *
+                CodecCompressRatio.getCompressRation(codecType) *
                 (isColor ? 3 : 1));
     }
 

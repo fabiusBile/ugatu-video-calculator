@@ -35,7 +35,7 @@ public class MainController implements Initializable {
     private ObservableList<Cam> camsList = FXCollections.observableArrayList();
 
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    public void initialize(URL location, ResourceBundle resources) {
 
         monthsSelector.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 60));
         weeksSelector.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 24));
@@ -55,7 +55,7 @@ public class MainController implements Initializable {
 
     public void calculateStorage() {
         var storageTime = calculateStorageTime();
-        var storageSize = VideoSizeCalculator.CalculateVideoSize(camsList, storageTime);
+        var storageSize = VideoSizeCalculator.calculateVideoSize(camsList, storageTime);
         storageSizeField.setText(StorageSizePresenter.getHumanReadableSize(storageSize));
     }
 
