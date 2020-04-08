@@ -2,6 +2,7 @@ package UnitTests;
 
 import Domain.Models.Cam;
 import Domain.Services.VideoSizeCalculator;
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.time.Duration;
@@ -18,5 +19,6 @@ public class VideoSizeCalculatorTest {
         cam.getResolution().setWidth(2);
 
         var result  = VideoSizeCalculator.CalculateVideoSize(List.of(cam), Duration.ofSeconds(10));
+        Assert.assertEquals(300,result);
     }
 }

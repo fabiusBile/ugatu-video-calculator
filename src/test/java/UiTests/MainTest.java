@@ -2,7 +2,6 @@ package UiTests;
 
 import Domain.Models.Cam;
 import Domain.Models.CodecType;
-import UgatuVideoCalculator.Main;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -14,12 +13,9 @@ import org.testfx.framework.junit.ApplicationTest;
 import java.io.IOException;
 public class MainTest extends ApplicationTest {
 
-    /**
-     * Will be called with {@code @Before} semantics, i. e. before each test method.
-     */
     @Override
     public void start(Stage stage) throws IOException {
-        Parent mainNode = FXMLLoader.load(Main.class.getResource("/Views/Main.fxml"));
+        Parent mainNode = FXMLLoader.load(getClass().getResource("/Views/Main.fxml"));
         stage.setScene(new Scene(mainNode));
         stage.show();
         stage.toFront();
